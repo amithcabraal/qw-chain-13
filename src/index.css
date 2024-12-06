@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --app-height: 100vh;
+  }
+}
+
+@layer utilities {
+  @media (max-height: 480px) {
+    .landscape-layout {
+      @apply grid grid-cols-2 gap-6 items-center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --app-height: calc(var(--vh, 1vh) * 100);
+  }
+}
